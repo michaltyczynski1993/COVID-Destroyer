@@ -64,18 +64,15 @@ public class GameController : MonoBehaviour
         GameObject.Destroy(enemy);
         isGameOver = true;
         StopCoroutine("SpawnVirus");
+        Debug.Log("Game Over!");
         //show main menu - not wrote yet
    }
 
    public void IncreaseSpawnRate()
    {
-       if (spawnRate > 0)
+       if (spawnRate > 1)
        {
            spawnRate--;
-       }
-       else if (spawnRate == 0)
-       {
-           spawnRate = 0.8f;
        }
    }
 }
