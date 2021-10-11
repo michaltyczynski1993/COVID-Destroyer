@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
-{
+{   //Game Objects
     public static GameController instance;
     public GameObject virus;
     public Text scoreText;
+    public GameObject canvasForMenu;
+    
+    //Variables
     private float randomX;
     private float randomY;
     private float randomZ;
@@ -65,6 +68,7 @@ public class GameController : MonoBehaviour
         isGameOver = true;
         StopCoroutine("SpawnVirus");
         Debug.Log("Game Over!");
+        canvasForMenu.SetActive(true);
         //show main menu - not wrote yet
    }
 
