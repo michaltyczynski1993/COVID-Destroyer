@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public GameObject virus;
     public Text scoreText;
+    public GameObject GameOverText; 
     public GameObject canvasForMenu;
     
     //Variables
@@ -66,10 +67,12 @@ public class GameController : MonoBehaviour
         foreach(GameObject enemy in enemies)
         GameObject.Destroy(enemy);
         isGameOver = true;
+        //Stop spawning viruses
         StopCoroutine("SpawnVirus");
-        Debug.Log("Game Over!");
+        //show menu to restart game
         canvasForMenu.SetActive(true);
-        //show main menu - not wrote yet
+        //show Game Over text to inform player about lose
+        GameOverText.SetActive(true);
    }
 
    public void IncreaseSpawnRate()
