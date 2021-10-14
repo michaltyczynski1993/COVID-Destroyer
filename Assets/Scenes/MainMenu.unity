@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c77303e81e8c5c42929dc03caa26005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_loadingTime: 1
+  m_loadingTime: 2
   m_onLoad:
     m_PersistentCalls:
       m_Calls: []
@@ -534,6 +534,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 766346198, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422168469, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
+      propertyPath: vrModeOnly
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
