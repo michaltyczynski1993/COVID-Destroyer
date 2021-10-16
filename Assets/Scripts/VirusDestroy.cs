@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VirusDestroy : MonoBehaviour
-{
+{   //Particle System instantion
+    public GameObject explosion;
+    
     public void DestroyCube()
     {
+        //Play Particle System explosion on virus destroy
+        Instantiate(explosion, this.transform.position, this.transform.rotation);
         Destroy(gameObject);
-        
         GameController.instance.virusKillCount++;
         if (GameController.instance.virusKillCount == 5)
         {
