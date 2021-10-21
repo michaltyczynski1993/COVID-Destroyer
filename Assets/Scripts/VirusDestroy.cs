@@ -5,10 +5,13 @@ using UnityEngine;
 public class VirusDestroy : MonoBehaviour
 {   //Particle System instantion
     public GameObject explosion;
+    public AudioClip dieSound;
+    private float soundVolume = 0.9f;
     
     public void DestroyCube()
     {
         //Play Particle System explosion on virus destroy
+        AudioSource.PlayClipAtPoint(dieSound, this.transform.position, soundVolume);
         Instantiate(explosion, this.transform.position, this.transform.rotation);
         Destroy(gameObject);
         GameController.instance.virusKillCount++;
